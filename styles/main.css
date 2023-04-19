@@ -113,7 +113,6 @@ section {
   position: relative;
   font-family: "Fraunces", serif;
   color: var(--dark-purple);
-  margin-bottom: 0.5rem;
 }
 .number {
   position: absolute;
@@ -133,6 +132,7 @@ section {
   line-height: 1.75;
   color: var(--davy-gray);
   text-align: center;
+  max-width: 30rem;
 }
 
 /* General Styles */
@@ -178,8 +178,11 @@ section {
 .hero-image__container {
   position: absolute;
   padding: 0 2.25em;
-  top: 28rem;
+  top: 19%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 10;
+  width: 80%;
 }
 
 .features {
@@ -206,6 +209,11 @@ section {
 }
 .feature * {
   z-index: 10;
+}
+.feature-texts {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
 }
 .feature {
   display: flex;
@@ -262,4 +270,48 @@ footer main {
   align-items: center;
   justify-content: space-between;
   gap: 1.7em;
+}
+
+.bg-pattern-1,
+.bg-pattern-2 {
+  display: none;
+}
+
+@media screen and (min-width: 48rem) {
+  .hero {
+    padding: 2em 2.5em 13em;
+  }
+  .hero main h1 {
+    max-width: 25rem;
+  }
+  .bg-pattern-1 {
+    position: absolute;
+    z-index: 10;
+    display: inline-block;
+    left: -14.5rem;
+    top: 6rem;
+  }
+  .bg-pattern-2 {
+    position: absolute;
+    z-index: 10;
+    display: inline-block;
+    right: -6rem;
+    top: 20rem;
+  }
+  .hero-image__container {
+    max-width: 35rem;
+  }
+  .features {
+    align-items: center;
+  }
+  .feature {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .feature-texts {
+    align-items: flex-start;
+  }
+  .feature-texts .body-text {
+    text-align: left;
+  }
 }
