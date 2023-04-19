@@ -195,7 +195,7 @@ section header {
   flex-direction: column;
   gap: 32px;
 }
-.body-demo {
+.body-text {
   font-family: "Manrope";
   font-style: normal;
   font-weight: 400;
