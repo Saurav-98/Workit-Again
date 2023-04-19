@@ -1,0 +1,137 @@
+:root {
+  --dark-purple: #24053e;
+  --primary-green: #44ffa1;
+  --davy-gray: #584d62;
+  --light-clr: #fcf8ff;
+  --white-clr: #ffffff;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+/* Utility classes */
+
+/* Buttons */
+
+.btn {
+  padding: 14px 26px;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  border: none;
+  display: inline-block;
+  border: 2px solid transparent;
+
+  cursor: pointer;
+  transition: all 0.28s ease-in;
+}
+
+.btn-primary {
+  background-color: var(--primary-green);
+  color: var(--dark-purple);
+}
+
+.btn-primary:hover {
+  color: var(--primary-green);
+  background-color: transparent;
+  border: 2px solid var(--primary-green);
+}
+.btn-secondary {
+  background-color: transparent;
+  color: var(--white-clr);
+  position: relative;
+  padding: 0;
+  padding-bottom: 2px;
+}
+.btn-secondary::before {
+  content: "";
+  height: 3px;
+  background-color: var(--primary-green);
+  position: absolute;
+  width: 100%;
+  bottom: -2px;
+}
+.btn-secondary:hover {
+  color: var(--primary-green);
+}
+
+/* Text Utility Classes */
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 3.125rem;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--white-clr);
+}
+.heading-secondary {
+  font-size: 56px;
+}
+.heading-tertiary {
+  font-size: 32px;
+}
+.body-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.underlined {
+  border-bottom: 3px solid var(--primary-green);
+}
+/* General Styles */
+
+.hero {
+  /* background-color: var(--dark-purple); */
+  /* background-color: #44ffa1; */
+  padding: 2em 1em 10em;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  background-color: var(--dark-purple);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+  /* transform: scale-x(4); */
+  transform: scaleX(3);
+}
+.hero main *,
+.hero nav * {
+  z-index: 2;
+}
+.hero nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4em;
+  z-index: 2;
+}
+.hero main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5em;
+  z-index: 3;
+}
